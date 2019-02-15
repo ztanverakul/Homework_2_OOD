@@ -2,7 +2,8 @@ class Shape:
   def __init__(self, database):
     self.database = database
 
-  #def SortShape(self):
+  def SortShape(self):
+    self.database.sort(key=len)
 
   def DisplayShape(self):
     for i in range(0, len(self.database)):
@@ -30,5 +31,6 @@ database.append(Triangle.getname())
 database.append(Square.getname())
 
 currentinst = Shape(database)
+currentinst.SortShape()
 currentinst.DatabaseSize()
 currentinst.DisplayShape()
